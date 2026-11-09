@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="X DIGITAL — creative digital services for growing brands. Design, video editing, websites and social media.">
+  <title>X DIGITAL | Create • Design • Develop</title>
+  <style>
+    :root{--bg:#080808;--panel:#121212;--gold:#d9a928;--gold2:#f7d778;--text:#f5f2e9;--muted:#aaa49a;--line:rgba(217,169,40,.25);--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(92%,var(--max));margin:auto}
+    .topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold2),transparent)}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:900;letter-spacing:2px;font-size:1.3rem}.brand span{color:var(--gold)}
+    nav{display:flex;gap:22px;align-items:center;font-size:.9rem;color:#ddd}nav a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:5px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120a;font-weight:800;border:0;cursor:pointer}
+    .btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold2)}
+    .hero{position:relative;overflow:hidden;padding:112px 0 100px;background:radial-gradient(ellipse at 78% 35%,rgba(217,169,40,.15),transparent 34%),linear-gradient(120deg,#090909,#111 58%,#080808)}
+    .hero:after{content:"X";position:absolute;right:6%;top:2%;font-size:clamp(230px,42vw,520px);line-height:1;color:rgba(217,169,40,.045);font-weight:900;pointer-events:none}
+    .eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:4px;font-size:.78rem;font-weight:800}
+    h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.98;letter-spacing:-3px;margin:18px 0}h1 span{color:var(--gold)}
+    .hero p{max-width:610px;color:#c4bfb5;font-size:1.12rem}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-note{margin-top:55px;color:#8f887b;font-size:.8rem;letter-spacing:2px}
+    section{padding:86px 0}.section-head{max-width:690px;margin-bottom:36px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:10px 0}.section-head p{color:var(--muted)}
+    .gold{color:var(--gold2)}.grid{display:grid;gap:18px}.about-grid{grid-template-columns:1.1fr .9fr;align-items:stretch}
+    .panel{background:linear-gradient(145deg,#151515,#0e0e0e);border:1px solid var(--line);border-radius:12px;padding:27px}
+    .about-card{display:flex;flex-direction:column;justify-content:center;min-height:260px}.about-card .bigx{font-size:5rem;font-weight:900;color:var(--gold);line-height:1}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.stat{padding:17px;border:1px solid var(--line);border-radius:8px}.stat b{display:block;color:var(--gold2);font-size:1.35rem}.stat small{color:var(--muted)}
+    .services{grid-template-columns:repeat(3,1fr)}.service{transition:.2s}.service:hover,.price:hover{transform:translateY(-4px);border-color:var(--gold)}
+    .ico{width:44px;height:44px;border:1px solid var(--gold);border-radius:9px;display:grid;place-items:center;color:var(--gold2);font-size:1.25rem;margin-bottom:15px}
+    .service h3,.price h3{margin:5px 0 8px}.service p,.price p{color:var(--muted);font-size:.93rem;margin:0}
+    .portfolio{grid-template-columns:repeat(3,1fr)}.work{min-height:190px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#242018,#101010);overflow:hidden}
+    .work .mock{height:100px;border:1px solid rgba(247,215,120,.35);border-radius:8px;display:grid;place-items:center;color:var(--gold2);font-size:2rem;font-weight:900;letter-spacing:3px;background:radial-gradient(circle,rgba(217,169,40,.13),transparent 70%)}
+    .work small{color:var(--muted)}
+    .pricing{grid-template-columns:repeat(3,1fr)}.price{position:relative}.price.featured{border-color:var(--gold);box-shadow:0 0 30px rgba(217,169,40,.08)}
+    .price .amount{font-size:2.1rem;font-weight:900;color:var(--gold2);margin:12px 0}.price ul{padding-left:18px;color:#c7c0b4;font-size:.92rem;min-height:115px}.price li{margin:5px 0}
+    .tag{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:#17120a;background:var(--gold2);padding:5px 9px;border-radius:3px;font-weight:900;display:inline-block}
+    .contact-grid{grid-template-columns:.8fr 1.2fr}.contact-list p{color:var(--muted)}form{display:grid;gap:13px}label{font-size:.85rem;color:#d7d0c4}input,textarea,select{width:100%;padding:13px;background:#090909;border:1px solid #39332a;border-radius:6px;color:white;font:inherit}input:focus,textarea:focus,select:focus{outline:1px solid var(--gold)}textarea{min-height:120px;resize:vertical}
+    .form-note{color:#928b80;font-size:.78rem}.success{display:none;padding:13px;border:1px solid var(--gold);border-radius:6px;color:var(--gold2);white-space:pre-wrap}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:#928b80;font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:800px){nav{display:none}.about-grid,.contact-grid{grid-template-columns:1fr}.services,.portfolio,.pricing{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:540px){section{padding:65px 0}.hero{padding:85px 0 70px}.services,.portfolio,.pricing{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.nav{min-height:64px}.hero-note{letter-spacing:1px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header><div class="wrap nav">
+    <a class="brand" href="#home">X <span>DIGITAL</span></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+    <a class="btn" href="#contact">Start a project</a>
+  </div></header>
+
+  <main>
+    <section class="hero" id="home"><div class="wrap">
+      <div class="eyebrow">Your all-in-one digital partner</div>
+      <h1>CREATE.<br><span>DESIGN.</span><br>DEVELOP.</h1>
+      <p>We help ideas become memorable brands through creative design, engaging videos, modern websites and social media content.</p>
+      <div class="actions"><a class="btn" href="#contact">Let's work together</a><a class="btn outline" href="#services">Explore services</a></div>
+      <div class="hero-note">CREATIVE THINKING &nbsp;•&nbsp; SMART DESIGN &nbsp;•&nbsp; DIGITAL GROWTH</div>
+    </div></section>
+
+    <section id="about"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">About X DIGITAL</div><h2>Big ideas deserve <span class="gold">bold execution.</span></h2><p>X DIGITAL is a creative digital-services brand focused on helping individuals, creators and small businesses build a clear and consistent online presence.</p></div>
+      <div class="grid about-grid">
+        <div class="panel"><h3>What we believe</h3><p style="color:var(--muted)">Good design should look professional, communicate clearly and help a business connect with the right audience. We bring design, content and web services together in one place.</p><div class="stats"><div class="stat"><b>01</b><small>Creative ideas</small></div><div class="stat"><b>02</b><small>Clear process</small></div><div class="stat"><b>03</b><small>Growth mindset</small></div></div></div>
+        <div class="panel about-card"><div class="bigx">X.</div><h3>Dream. Create. Grow.</h3><p style="color:var(--muted)">A fresh digital presence starts with one conversation.</p></div>
+      </div>
+    </div></section>
+
+    <section id="services" style="background:#0d0d0d"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Our <span class="gold">services</span></h2><p>Flexible creative support for your brand, channel or business.</p></div>
+      <div class="grid services">
+        <article class="panel service"><div class="ico">✦</div><h3>Logo Design</h3><p>Distinctive logo concepts and visual identity for your brand.</p></article>
+        <article class="panel service"><div class="ico">▶</div><h3>Video Editing</h3><p>Short-form edits, reels and promotional videos.</p></article>
+        <article class="panel service"><div class="ico">⌘</div><h3>Website Development</h3><p>Responsive, clean websites for portfolios and small businesses.</p></article>
+        <article class="panel service"><div class="ico">▧</div><h3>Poster Design</h3><p>Promotional posters, announcements and digital creatives.</p></article>
+        <article class="panel service"><div class="ico">▣</div><h3>YouTube Thumbnails</h3><p>Eye-catching thumbnail designs that fit your channel identity.</p></article>
+        <article class="panel service"><div class="ico">↗</div><h3>Social Media Management</h3><p>Content planning, post design and account support.</p></article>
+      </div>
+    </div></section>
+
+    <section id="portfolio"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Selected work</div><h2>Our <span class="gold">portfolio</span></h2><p>Sample project categories. Replace these placeholders with your real work as you complete client projects.</p></div>
+      <div class="grid portfolio">
+        <div class="panel work"><div class="mock">BRAND</div><div><h3>Brand identity</h3><small>Logo & visual direction · Sample</small></div></div>
+        <div class="panel work"><div class="mock">VIDEO</div><div><h3>Video content</h3><small>Short-form editing · Sample</small></div></div>
+        <div class="panel work"><div class="mock">WEB</div><div><h3>Business website</h3><small>Web design · Sample</small></div></div>
+      </div>
+    </div></section>
+
+    <section id="reviews" style="background:#0d0d0d"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Client voices</div><h2>Reviews &amp; <span class="gold">feedback</span></h2><p>Have you worked with X DIGITAL? Share your experience and help us improve.</p></div>
+      <div class="grid about-grid">
+        <div class="panel"><h3>Share your feedback</h3>
+          <form id="review-form">
+            <div><label for="review-name">Your name</label><input id="review-name" name="review-name" required maxlength="70" placeholder="Enter your name"></div>
+            <div><label for="review-service">Service used</label><select id="review-service" name="review-service" required><option value="">Choose a service</option><option>Logo design</option><option>Video editing</option><option>Website development</option><option>Poster design</option><option>YouTube thumbnails</option><option>Social media management</option><option>Other</option></select></div>
+            <div><label for="review-rating">Your rating</label><select id="review-rating" name="review-rating" required><option value="">Select a rating</option><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Very good</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Fair</option><option value="1">★☆☆☆☆ — Needs improvement</option></select></div>
+            <div><label for="review-message">Your feedback</label><textarea id="review-message" name="review-message" required maxlength="1000" placeholder="Tell us what went well or what we can improve..."></textarea></div>
+            <button class="btn" type="submit">Prepare feedback</button><div class="success" id="review-success" role="status"></div>
+            <p class="form-note">Demo form: feedback is prepared for copying, not automatically sent or published. Connect a form service or backend to collect reviews online.</p>
+          </form>
+        </div>
+        <div class="panel about-card"><div class="bigx">★</div><h3>Your feedback matters.</h3><p style="color:var(--muted)">We value honest feedback from real customers. Publicly display reviews only with the reviewer's permission.</p><a class="btn outline" href="#contact">Contact X DIGITAL</a></div>
+      </div>
+    </div></section>
+    <section id="pricing" style="background:#0d0d0d"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Simple starting rates</div><h2>Choose your <span class="gold">package</span></h2><p>Illustrative introductory prices in INR. Confirm the project scope and final quote before accepting an order.</p></div>
+      <div class="grid pricing">
+        <article class="panel price"><h3>Starter</h3><p>For one small creative task.</p><div class="amount">₹199<span style="font-size:.85rem;color:var(--muted)"> / starting</span></div><ul><li>One poster or thumbnail</li><li>One design concept</li><li>One revision</li></ul><a class="btn outline" href="#contact">Enquire now</a></article>
+        <article class="panel price featured"><span class="tag">Popular</span><h3>Growth</h3><p>For creators and growing brands.</p><div class="amount">₹999<span style="font-size:.85rem;color:var(--muted)"> / starting</span></div><ul><li>Logo or creative bundle</li><li>Up to five design assets</li><li>Two revision rounds</li></ul><a class="btn" href="#contact">Enquire now</a></article>
+        <article class="panel price"><h3>Website</h3><p>For a simple online presence.</p><div class="amount">₹1,999<span style="font-size:.85rem;color:var(--muted)"> / starting</span></div><ul><li>Basic one-page website</li><li>Mobile-friendly layout</li><li>Customer enquiry section</li></ul><a class="btn outline" href="#contact">Enquire now</a></article>
+      </div>
+    </div></section>
+
+    <section id="contact"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Get in touch</div><h2>Have a project in <span class="gold">mind?</span></h2><p>Tell us what you need. We'll use the details to prepare a project enquiry.</p></div>
+      <div class="grid contact-grid">
+        <div class="panel contact-list"><h3>Let's make it happen.</h3><p>Share your idea, preferred service and budget. X DIGITAL can then respond with a suitable scope and quote.</p><p><span class="gold">Services</span><br>Design · Video · Websites · Social media</p><p><span class="gold">Availability</span><br>By project enquiry</p></div>
+        <div class="panel"><form id="enquiry">
+          <div><label for="name">Your name</label><input id="name" name="name" required placeholder="Enter your name"></div>
+          <div><label for="email">Email address</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div>
+          <div><label for="service">Service needed</label><select id="service" name="service" required><option value="">Choose a service</option><option>Logo design</option><option>Video editing</option><option>Website development</option><option>Poster design</option><option>YouTube thumbnails</option><option>Social media management</option><option>Multiple services</option></select></div>
+          <div><label for="budget">Approximate budget</label><select id="budget" name="budget"><option>Not decided</option><option>Below ₹500</option><option>₹500–₹1,000</option><option>₹1,000–₹5,000</option><option>Above ₹5,000</option></select></div>
+          <div><label for="message">Project details</label><textarea id="message" name="message" required placeholder="Briefly describe what you need..."></textarea></div>
+          <button class="btn" type="submit">Prepare enquiry</button>
+          <div class="success" id="success" role="status"></div>
+          <p class="form-note">Demo form: it prepares and displays your enquiry on this page. It does not send information to X DIGITAL until you connect a business email or form service.</p>
+        </form></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="wrap foot"><div><strong class="brand">X <span>DIGITAL</span></strong><br>CREATE • DESIGN • DEVELOP</div><div>© <span id="year"></span> X DIGITAL. All rights reserved.</div></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('enquiry').addEventListener('submit', function(e){
+      e.preventDefault();
+      const d = new FormData(this);
+      const summary = `X DIGITAL — New project enquiry\\nName: ${d.get('name')}\\nEmail: ${d.get('email')}\\nService: ${d.get('service')}\\nBudget: ${d.get('budget')}\\nDetails: ${d.get('message')}`;
+      const box = document.getElementById('success');
+      box.style.display = 'block';
+      box.textContent = 'Your enquiry is ready. Copy the details below and send them to X DIGITAL:\\n\\n' + summary;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(summary).then(()=>{box.textContent += '\\n\\nEnquiry copied to clipboard.';}).catch(()=>{});
+      }
+    });
+    document.getElementById('review-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const d = new FormData(this);
+      const summary = `X DIGITAL — Customer feedback\nName: ${d.get('review-name')}\nService: ${d.get('review-service')}\nRating: ${d.get('review-rating')}/5\nFeedback: ${d.get('review-message')}`;
+      const box = document.getElementById('review-success');
+      box.style.display = 'block';
+      box.textContent = 'Your feedback is ready. Copy the details below and send them to X DIGITAL:\n\n' + summary;
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(summary).then(()=>{box.textContent += '\n\nFeedback copied to clipboard.';}).catch(()=>{});
+    });
+  </script>
+</body>
+</html>
